@@ -1,0 +1,15 @@
+1. 页面中新闻列表等等，其他列表连接导航获取参数问题
+描述：如果是一个新闻列表，使用<navigator>导航， wx:for循环遍历，所以url中会传递唯一的参数url="{{item.url}}?id={{item.id}}"传递过来不同的id
+  然后在新闻详细界面，就可以通过传递的不同参数来查询数据库，获取对应的不同信息。
+  
+  详细信息界面，获取参数很简单
+  
+  js文件中
+  Pages({
+  // 界面刚加载就获取参数
+    onLoad:function(options) {
+    // 通过options对象，获取传递过来的参数
+      console.log(options.id);
+    }
+  })
+  
